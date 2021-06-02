@@ -1,0 +1,132 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  /* background: #f3f3f3; */
+  background: linear-gradient(to right, #5614b0, #dbd65c);
+  font-family: "Helvetica Neue", arial, sans-serif;
+  font-weight: 400;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.player {
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  z-index: 1;
+}
+
+.player > button {
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  padding: 15px 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.player > button:hover {
+  background: #444;
+}
+
+.stop {
+  background-color: red;
+}
+
+.call {
+  background-color: #5614b0;
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  transition: width ease-in 2s;
+  background-color: #fff;
+  z-index: 11;
+}
+
+.notification > p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.notification > button {
+  padding: 10px 15px;
+  background: #5614b0;
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.notification > button:hover {
+  background: #444;
+}
+
+.container .ql-editor {
+  width: 8.5in;
+  min-height: 11in;
+  padding: 0.3in;
+  margin: 1rem;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  background-color: white;
+}
+
+.container .ql-container.ql-snow {
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.container .ql-toolbar.ql-snow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: sticky;
+  padding: 12px 0;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+@page {
+  margin: 1in;
+}
+
+@media print {
+  body {
+    background: none;
+  }
+
+  .player {
+    display: none;
+  }
+
+  .container .ql-editor {
+    width: 6.5in;
+    height: 9in;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    align-self: flex-start;
+  }
+
+  .container .ql-toolbar.ql-snow {
+    display: none;
+  }
+}
